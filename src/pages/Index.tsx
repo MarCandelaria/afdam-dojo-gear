@@ -1,13 +1,29 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import CatalogSection from "@/components/CatalogSection";
+import HowItWorks from "@/components/HowItWorks";
+import Benefits from "@/components/Benefits";
+import Testimonials from "@/components/Testimonials";
+import FAQSection from "@/components/FAQSection";
+import OrderSection from "@/components/OrderSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
+  const [selectedDesign, setSelectedDesign] = useState<string | null>(null);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main>
+      <Navbar />
+      <HeroSection />
+      <CatalogSection selectedDesign={selectedDesign} onSelect={setSelectedDesign} />
+      <HowItWorks />
+      <Benefits />
+      <Testimonials />
+      <FAQSection />
+      <OrderSection selectedDesign={selectedDesign} onSelectDesign={() => {}} />
+      <Footer />
+    </main>
   );
 };
 
