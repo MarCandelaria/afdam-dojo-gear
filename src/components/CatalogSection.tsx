@@ -39,11 +39,12 @@ const CatalogSection = ({ selectedDesign, onSelect }: Props) => {
             return (
               <div
                 key={d.id}
-                className={`relative rounded-lg border p-6 transition-all duration-300 cursor-pointer ${
+                className={`relative border p-6 transition-all duration-300 cursor-pointer bg-black ${
                   isSelected
-                    ? "border-primary bg-primary/10 glow-red scale-[1.02]"
-                    : `${d.color} hover:border-primary/50 hover:card-hover`
+                    ? "border-primary glow-red scale-[1.02]"
+                    : "border-white/10 hover:border-primary/50 hover:card-hover"
                 }`}
+                style={{ borderRadius: '12px' }}
                 onClick={() => onSelect(d.id)}
               >
                 {/* Placeholder T-shirt icon */}
