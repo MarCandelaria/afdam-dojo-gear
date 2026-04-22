@@ -29,6 +29,7 @@ const HeroSection = () => {
               <a
                 href="#pedir"
                 className="bg-primary text-primary-foreground px-8 py-3.5 rounded-md font-semibold text-center hover:opacity-90 transition-opacity animate-pulse-glow"
+                style={{ boxShadow: '0 0 6px rgba(255, 49, 49, 0.5), 0 0 12px rgba(255, 49, 49, 0.3)' }}
               >
                 Pedir por WhatsApp
               </a>
