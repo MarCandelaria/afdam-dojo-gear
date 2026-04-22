@@ -54,10 +54,10 @@ const CatalogSection = ({ selectedDesign, onSelect }: Props) => {
                   </svg>
                 </div>
 
-                <h3 className="font-display text-xl text-foreground">{d.name}</h3>
+                <h3 className="font-display text-xl text-white font-bold">{d.name}</h3>
                 <p className="text-sm text-muted-foreground mt-1 mb-3">{d.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="font-semibold text-foreground">{d.price}</span>
+                  <span className="font-semibold text-[#ff3333]/[0.53] text-sm">{d.price}</span>
                   <span
                     className={`text-xs px-3 py-1 rounded-full font-medium ${
                       isSelected
