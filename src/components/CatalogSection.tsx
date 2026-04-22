@@ -39,30 +39,41 @@ const CatalogSection = ({ selectedDesign, onSelect }: Props) => {
             return (
               <div
                 key={d.id}
-                className={`relative border p-6 transition-all duration-300 cursor-pointer bg-black ${
-                  isSelected
-                    ? "border-primary glow-red scale-[1.02]"
-                    : "border-white/10 hover:border-primary/50 hover:card-hover"
+                className={`relative overflow-hidden p-5 transition-all duration-300 cursor-pointer ${
+                  isSelected ? "glow-red scale-[1.02]" : "hover:border-primary/50"
                 }`}
-                style={{ borderRadius: '12px' }}
+                style={{
+                  borderRadius: '12px',
+                  backgroundColor: '#000000',
+                  border: isSelected ? '1px solid #FF3131' : '1px solid rgba(255,255,255,0.1)',
+                }}
                 onClick={() => onSelect(d.id)}
               >
-                {/* Placeholder T-shirt icon */}
-                <div className="w-full h-32 flex items-center justify-center mb-4">
-                  <svg className={`w-20 h-20 ${isSelected ? "text-primary" : "text-muted-foreground"}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                {/* Spotlight effect */}
+                <div
+                  className="pointer-events-none absolute inset-x-0 top-0 h-56"
+                  style={{
+                    background:
+                      'radial-gradient(ellipse 60% 80% at 50% 0%, rgba(255,49,49,0.18) 0%, rgba(255,49,49,0.08) 30%, rgba(0,0,0,0) 70%)',
+                  }}
+                />
+
+                {/* Image / placeholder container */}
+                <div className="relative w-full h-48 flex items-center justify-center mb-5 overflow-hidden" style={{ borderRadius: '8px' }}>
+                  <svg className={`w-32 h-32 ${isSelected ? "text-primary" : "text-muted-foreground"}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="M6.5 2L2 6.5L5 8V20C5 20.5523 5.44772 21 6 21H18C18.5523 21 19 20.5523 19 20V8L22 6.5L17.5 2H14.5C14.5 3.38071 13.3807 4.5 12 4.5C10.6193 4.5 9.5 3.38071 9.5 2H6.5Z" />
                   </svg>
                 </div>
 
                 <h3 className="font-display text-xl text-white font-bold">{d.name}</h3>
-                <p className="text-sm text-muted-foreground mt-1 mb-3">{d.description}</p>
+                <p className="text-sm mt-1 mb-4" style={{ color: 'rgba(240,240,240,0.7)' }}>{d.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="font-semibold text-[#ff3333]/[0.53] text-sm">{d.price}</span>
+                  <span className="font-bold text-lg" style={{ color: '#FF3131' }}>{d.price}</span>
                   <span
-                    className={`text-xs px-3 py-1 rounded-full font-medium border transition-colors ${
+                    className={`text-xs px-4 py-1.5 rounded-full font-medium border transition-colors ${
                       isSelected
                         ? "bg-primary text-primary-foreground border-primary"
-                        : "border-primary text-white hover:bg-primary hover:text-primary-foreground"
+                        : "bg-transparent border-white/40 text-white hover:bg-primary hover:border-primary hover:text-primary-foreground"
                     }`}
                   >
                     {isSelected ? "✓ Seleccionado" : "Seleccionar"}
