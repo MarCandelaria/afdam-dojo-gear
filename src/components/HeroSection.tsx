@@ -44,23 +44,24 @@ const HeroSection = () => {
             </p>
           </div>
 
-          <div className="hidden lg:flex justify-center items-end gap-4">
+          <div className="flex flex-col lg:flex-row justify-center items-center lg:items-end gap-4 mt-8 lg:mt-0">
             <video
               src={luchadora}
-              className="block w-full max-w-[256px] aspect-[4/5] rounded-lg object-cover shadow-2xl"
+              className="w-64 h-[320px] rounded-lg object-cover shadow-[var(--shadow-card)] border border-border"
               autoPlay
               muted
               loop
               playsInline
             >
-  Tu navegador no admite el elemento video.
-</video>
-            <img
+            Tu navegador no admite el elemento video.
+          </video>
+
+          <img
               src={heroMale}
               alt="Alumno AFDAM con camiseta del dojo"
-              className="w-64 rounded-lg object-cover shadow-[var(--shadow-card)] border border-border -mt-8"
+              className="w-64 h-[320px] rounded-lg object-cover shadow-[var(--shadow-card)] border border-border"
               loading="lazy"
-            />
+          />
           </div>
         </div>
       </div>
