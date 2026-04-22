@@ -1,5 +1,6 @@
-import heroFemale from "@/assets/hero-female.png";
+//import heroFemale from "@/assets/hero-female.png";
 import heroMale from "@/assets/hero-male.png";
+import heroFemale from "@/assets/luchadora_afdam.mp4";
 
 const HeroSection = () => {
   return (
