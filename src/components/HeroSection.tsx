@@ -1,6 +1,6 @@
 //import heroFemale from "@/assets/hero-female.png";
 import heroMale from "@/assets/hero-male.png";
-import heroFemale from "@/assets/luchadora_afdam.mp4";
+import luchadora from "@/assets/luchadora_afdam.mp4";
 
 const HeroSection = () => {
   return (
@@ -46,13 +46,13 @@ const HeroSection = () => {
 
           <div className="hidden lg:flex justify-center items-end gap-4">
             <video
-              src={heroFemale}
+              src={luchadora}
               className="w-64 rounded-lg object-cover shadow-[var(--shadow-card)] border border-border"
               autoPlay
               muted
               loop
               playsInline
-            />
+            >
   Tu navegador no admite el elemento video.
 </video>
             <img
