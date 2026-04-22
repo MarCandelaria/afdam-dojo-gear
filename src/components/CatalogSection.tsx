@@ -27,7 +27,7 @@ const CatalogSection = ({ selectedDesign, onSelect }: Props) => {
     <section id="disenos" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-display text-4xl sm:text-5xl text-foreground mb-3">ELIGE TU DISEÑO</h2>
+          <h2 className="text-4xl sm:text-5xl mb-3 font-sans font-bold text-[#ff3333] rounded-none opacity-95 shadow-lg">ELIGE TU DISEÑO</h2>
           <p className="text-muted-foreground max-w-md mx-auto">
             6 diseños creados para la comunidad AFDAM. Cada uno cuenta una historia del dojo.
           </p>
