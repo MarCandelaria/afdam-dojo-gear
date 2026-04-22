@@ -59,10 +59,10 @@ const CatalogSection = ({ selectedDesign, onSelect }: Props) => {
                 <div className="flex items-center justify-between">
                   <span className="font-semibold text-[#ff3333]/[0.53] text-sm">{d.price}</span>
                   <span
-                    className={`text-xs px-3 py-1 rounded-full font-medium ${
+                    className={`text-xs px-3 py-1 rounded-full font-medium border transition-colors ${
                       isSelected
-                        ? "bg-primary text-primary-foreground"
-                        : "bg-secondary text-secondary-foreground"
+                        ? "bg-primary text-primary-foreground border-primary"
+                        : "border-primary text-white hover:bg-primary hover:text-primary-foreground"
                     }`}
                   >
                     {isSelected ? "✓ Seleccionado" : "Seleccionar"}
