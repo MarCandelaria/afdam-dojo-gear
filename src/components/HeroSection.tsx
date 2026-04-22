@@ -47,7 +47,7 @@ const HeroSection = () => {
           <div className="hidden lg:flex justify-center items-end gap-4">
             <video
               src={luchadora}
-              className="w-64 rounded-lg object-cover shadow-[var(--shadow-card)] border border-border"
+              className="block w-full max-w-[256px] aspect-[4/5] rounded-lg object-cover shadow-2xl"
               autoPlay
               muted
               loop
