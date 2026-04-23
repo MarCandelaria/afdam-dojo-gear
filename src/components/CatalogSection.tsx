@@ -12,7 +12,7 @@ interface Design {
 const designs: Design[] = [
   { id: "classic", name: "Classic Logo", description: "El escudo AFDAM en el pecho. La esencia del dojo.", price: "$350 MXN", color: "bg-primary/20 border-primary/40" },
   { id: "kanji", name: "Minimal Kanji", description: "Carácter kanji en la espalda. Elegancia marcial.", price: "$350 MXN", color: "bg-secondary border-border" },
-  { id: "fight-team", name: "Fight Team", description: "Para los que compiten. Edición competidores.", price: "$400 MXN", color: "bg-primary/10 border-primary/30", image:"/assets/afdam_camiseta_fight_team.png" },
+  { id: "fight-team", name: "Fight Team", description: "Para los que compiten. Edición competidores.", price: "$400 MXN", color: "bg-primary/10 border-primary/30", image:"./assets/afdam_camiseta_fight_team.png" },
   { id: "vintage", name: "Vintage Dojo", description: "Estilo retro con el año de fundación. Tradición pura.", price: "$350 MXN", color: "bg-secondary border-border" },
   { id: "limited", name: "Limited Batch", description: "Tirada limitada con diseño exclusivo de temporada.", price: "$450 MXN", color: "bg-primary/20 border-primary/40" },
   { id: "training", name: "Training Day", description: "Corte deportivo, ideal para sesiones intensas.", price: "$380 MXN", color: "bg-secondary border-border" },
