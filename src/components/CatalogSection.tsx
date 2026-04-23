@@ -2,6 +2,9 @@ import { useState } from "react";
 import fightTeamImg from "@/assets/afdam_camiseta_fight_team.png";
 import classicImg from "@/assets/afdam_camiseta_classic.png";
 import minimalImg from "@/assets/afdam_camiseta_minimal.png";
+import vintageImg from "@/assets/afdam_camiseta_vintage.png";
+import limitedImg from "@/assets/afdam_camiseta_limited.png";
+import trainingImg from "@/assets/afdam_camiseta_training.png";
 
 interface Design {
   id: string;
@@ -16,9 +19,9 @@ const designs: Design[] = [
   { id: "classic", name: "Classic Logo", description: "El escudo AFDAM en el pecho. La esencia del dojo.", price: "$350 MXN", color: "bg-primary/20 border-primary/40", image:classicImg },
   { id: "kanji", name: "Minimal Kanji", description: "Carácter kanji en la espalda. Elegancia marcial.", price: "$350 MXN", color: "bg-secondary border-border", image:minimalImg },
   { id: "fight-team", name: "Fight Team", description: "Para los que compiten. Edición competidores.", price: "$400 MXN", color: "bg-primary/10 border-primary/30", image:fightTeamImg },
-  { id: "vintage", name: "Vintage Dojo", description: "Estilo retro con el año de fundación. Tradición pura.", price: "$350 MXN", color: "bg-secondary border-border" },
-  { id: "limited", name: "Limited Batch", description: "Tirada limitada con diseño exclusivo de temporada.", price: "$450 MXN", color: "bg-primary/20 border-primary/40" },
-  { id: "training", name: "Training Day", description: "Corte deportivo, ideal para sesiones intensas.", price: "$380 MXN", color: "bg-secondary border-border" },
+  { id: "vintage", name: "Vintage Dojo", description: "Estilo retro con el año de fundación. Tradición pura.", price: "$350 MXN", color: "bg-secondary border-border", image:vintageImg },
+  { id: "limited", name: "Limited Batch", description: "Tirada limitada con diseño exclusivo de temporada.", price: "$450 MXN", color: "bg-primary/20 border-primary/40", image:limitedImg },
+  { id: "training", name: "Training Day", description: "Corte deportivo, ideal para sesiones intensas.", price: "$380 MXN", color: "bg-secondary border-border", image:trainingImg },
 ];
 
 interface Props {
